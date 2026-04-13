@@ -47,9 +47,7 @@
       border-bottom: 2px solid #80dde973;
       padding-bottom: 4px;
     }
-       nav div a:hover {
-  color: black;
-}
+  
     /* HERO */
     .hero {
       background: linear-gradient(120deg, #817878, #80dde973);
@@ -98,7 +96,7 @@
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform .3s;
+       transform: translateY(-8px);
     }
     .card img {
       width: 100%;
@@ -227,6 +225,15 @@
   padding: 40px;
   background: #817878;
   color: #fff;
+}
+.footer-about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-about p {
+  max-width: 300px;
 }
 
 .footer-container h3,
@@ -721,7 +728,8 @@ Tambah ke Keranjang
     <div class="footer-about">
      <img src="logo-removebg-preview (1).png" alt="Vrylia Batik" style="width:250px; height:auto; ">
       <p>
-        Vrylia Batik menghadirkan koleksi batik modern, elegan, dan berkualitas tinggi untuk setiap momen spesial Anda.
+        Temukan pesona batik dalam balutan desain modern dan berkelas. 
+          Vrylia Batik menghadirkan koleksi eksklusif dengan kualitas premium untuk penampilan yang tak terlupakan.
       </p>
     </div>
 
@@ -782,9 +790,6 @@ Tambah ke Keranjang
 
   </div>
 </div>
-
-</body>
-
 
 <script>
 function pilihUkuran(btn) {
@@ -885,5 +890,5 @@ function tutupModal() {
 }
 
 </script>
-
+</body>
 </html>

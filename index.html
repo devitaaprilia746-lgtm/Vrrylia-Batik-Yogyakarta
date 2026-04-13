@@ -48,10 +48,6 @@
     font-weight: 500;
     position: relative;
     }
-    nav div a:hover {
-  color: black;
-}
-
     /* Hero Section */
 .hero-slider {
   height: 85vh;
@@ -119,6 +115,18 @@
   display: flex;
   justify-content: center;
   gap: 12px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  background: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dot.active {
+  opacity: 1;
+  background: white;
 }
 /* SPLIT COLLECTION FULL TANPA JARAK */
 .split-collection {
@@ -265,6 +273,15 @@
   padding: 40px;
   background: #817878;
   color: #fff;
+}
+.footer-about {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-about p {
+  max-width: 300px;
 }
 
 .footer-container h3,
@@ -498,7 +515,8 @@ Dirancang dengan sentuhan modern tanpa meninggalkan nilai klasiknya, kebaya kami
     <div class="footer-about">
      <img src="logo-removebg-preview (1).png" alt="Vrylia Batik" style="width:250px; height:auto; ">
       <p>
-        Vrylia Batik menghadirkan koleksi batik modern, elegan, dan berkualitas tinggi untuk setiap momen spesial Anda.
+          Temukan pesona batik dalam balutan desain modern dan berkelas. 
+          Vrylia Batik menghadirkan koleksi eksklusif dengan kualitas premium untuk penampilan yang tak terlupakan.
       </p>
     </div>
 
@@ -580,32 +598,6 @@ function updateCartBadge() {
     badge.style.display = "none";
   }
 }
-
-function addCart(nama, harga, foto) {
-  let cart = getCart();
-
-  let produk = cart.find(item => item.nama === nama);
-
-  if (produk) {
-    produk.qty += 1;
-  } else {
-    cart.push({
-      nama,
-      harga,
-      foto,
-      qty: 1
-    });
-  }
-
-  saveCart(cart);
-  updateCartBadge();
-  alert(nama + " masuk ke keranjang 🛒");
-}
-
-updateCartBadge();
 </script>
-
-
-
 </body>
 </html>
